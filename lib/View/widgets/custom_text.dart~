@@ -1,0 +1,19 @@
+import 'package:flutter/cupertino.dart';
+
+class CustomText extends StatelessWidget {
+ // CustomText({super.key});
+final String text;
+final String? color;
+final double? size;
+CustomText({super.key, required this.text, this.color = '0xFF000000', this.size = 16});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Text(
+        text,
+        style: TextStyle(color: Color(int.parse(color!)), fontSize: size),
+
+      ),
+    );
+  }
+}

@@ -1,0 +1,29 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class CustomTextFromFild extends StatelessWidget {
+   CustomTextFromFild({super.key, required this.text});
+final String text;
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      cursorColor: Colors.white,
+
+      decoration: InputDecoration(
+        hintText: text,
+        fillColor: Colors.white,
+        filled: true,
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.white),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.white),
+          borderRadius: BorderRadius.circular(10),
+
+        ),
+
+      ),
+    );
+  }
+}
